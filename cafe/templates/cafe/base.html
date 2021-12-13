@@ -39,16 +39,14 @@
         {% endif %}
 
          <!--My bag functionality-->
-
         <li class="nav-item">
-
             {% with totail_items=cart|length %}
                 {% if cart|length > 0 %}
                     <a class="nav-link" href="{% url "cart:cart_detail" %}" >
                         My bag <sup style="color: firebrick">{{ totail_items }} item{{ totail_items|pluralize }}</sup>
                     </a>
                 {% else %}
-
+                    <a class="nav-link" href="{% url "cart:cart_detail" %}">My bag</a>
                 {% endif %}
             {% endwith %}
         </li>
